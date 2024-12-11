@@ -17,7 +17,10 @@ const ajouterProduitPanier = (name, price) => {
     panier.push({name, price, quantite:1})
   }
 
-  return panier.reduce( (acc, produit) => acc + produit.price * produit.quantite , 0)
+  // return panier.reduce( (acc, produit) => acc + produit.price * produit.quantite , 0)
+  let total = 0
+  panier.map(produit => total += produit.price * produit.quantite)
+  return total
 
 }
 
@@ -27,5 +30,6 @@ console.log(ajouterProduitPanier("Pomme", 2))
 console.log(ajouterProduitPanier("Banane", 3))
 console.log(ajouterProduitPanier("Orange", 4))
 console.log(ajouterProduitPanier("Pomme", 2))
+
 
 
