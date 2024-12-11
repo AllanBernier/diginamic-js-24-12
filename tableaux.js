@@ -7,7 +7,7 @@ notes.filter( (element) => element > 10)
 
 // const acc = 0
 // notes.map( (element) => acc = acc + element )
-notes.reduce( (element, acc) => acc = acc + element , 0)
+notes.reduce( (acc, element) => acc = acc + element , 0)
 
 const add = (note) => {
   notes.push(note)
