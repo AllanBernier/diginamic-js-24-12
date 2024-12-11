@@ -13,12 +13,12 @@ const analyserPhrase = (sentence) => {
   result.sentenceLength = words.length
 
   // Le mot le plus long.
-  // result.longestWord = ""
-  // words.map((word) => {
-  //   if (word.length > result.longestWord.length) {
-  //     result.longestWord = word
-  //   }
-  // })
+  result.longestWord = ""
+  words.map((word) => {
+    if (word.length > result.longestWord.length) {
+      result.longestWord = word
+    }
+  })
 
   // Le nombre d'occurrences de chaque mot.
   result.occurrences = words.reduce((acc, word) => {
