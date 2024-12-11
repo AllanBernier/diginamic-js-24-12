@@ -1,4 +1,13 @@
-let notes = []
+let notes = [10,15,20]
+
+
+notes.map( (element) => {} )
+notes.filter( (element) => element > 10)
+
+
+// const acc = 0
+// notes.map( (element) => acc = acc + element )
+notes.reduce( (element, acc) => acc = acc + element , 0)
 
 const add = (note) => {
   notes.push(note)
@@ -40,3 +49,16 @@ console.log(notes)
 console.log(remove(6))
 console.log(sum())
 console.log(avg())
+
+
+
+
+let animaux = ['Chat', 'Chien']
+
+let animauxCopy = animaux // copy referance
+// let animauxCopy = [ ... animaux  ] // copy contenu
+
+animaux.push("Souris")
+
+console.log(animaux)
+console.log(animauxCopy)
