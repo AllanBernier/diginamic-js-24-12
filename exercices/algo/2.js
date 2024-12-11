@@ -22,12 +22,22 @@ const analyserPhrase = (sentence) => {
 
   // Le nombre d'occurrences de chaque mot.
   result.occurrences = words.reduce((acc, word) => {
-    acc[word] = ( acc[word] || 0 ) + 1
+    acc[word] = (acc[word] || 0) + 1
     return acc
   }, {})
 
   return result
 }
+
+
+
+const panier = [
+  { nom: "", quantité: 1, prix: 85 },
+  { nom: "", quantité: 1, prix: 85 },
+  { nom: "", quantité: 1, prix: 85 },
+  { nom: "", quantité: 1, prix: 85 }
+]
+
 
 
 
@@ -48,17 +58,17 @@ console.log(analyserPhrase("Créez une fonction objet qui prend une objet en ent
 // }, {})
 
 
-  // Le mot le plus long.
-  // result.longestWord = ""
-  // words.map((word) => { 
-  //   // Ternaire
-  //   result.longestWord = word.length > result.longestWord.length ? word : result.longestWord
-  // })
+// Le mot le plus long.
+// result.longestWord = ""
+// words.map((word) => {
+//   // Ternaire
+//   result.longestWord = word.length > result.longestWord.length ? word : result.longestWord
+// })
 
 
-  // result.longestWord = words.reduce( (acc, word) => {
-  //   if (word.length > acc.length) {
-  //     return word
-  //   }
-  //   return acc
-  // }, "")
+// result.longestWord = words.reduce( (acc, word) => {
+//   if (word.length > acc.length) {
+//     return word
+//   }
+//   return acc
+// }, "")
