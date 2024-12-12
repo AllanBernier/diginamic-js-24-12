@@ -1,0 +1,20 @@
+<html>
+
+  <canvas id="canva" width="500" height="500" style="border: 1px solid black" ></canvas>
+
+  <script>
+
+    const canva = document.getElementById("canva")
+    const ctx = canva.getContext("2d")
+
+    ctx.beginPath()
+    ctx.moveTo(250,100)
+    ctx.lineTo(100, 250)    
+    ctx.lineTo(250, 300)    
+    ctx.closePath()
+
+    ctx.lineWidth = 2
+    ctx.stroke();
+
+  </script>
+</html>
