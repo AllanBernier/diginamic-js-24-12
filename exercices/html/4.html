@@ -1,0 +1,37 @@
+<html>
+
+  <canvas id="paint" width="500" height="500" style="border : 1px solid black">
+
+  <script>
+    const canvas = document.getElementById("paint")
+    const ctx = canvas.getContext("2d")
+    let isDrawing = false
+    let oldX = 0
+    let oldY = 0
+
+    
+
+    document.addEventListener('mousedown', (event) => {
+      isDrawing = true
+      oldX = event.offsetX
+      oldY = event.offsetY
+      })
+    document.addEventListener('mouseup', (event) => isDrawing = false )
+
+    document.addEventListener('mousemove', (event) => {
+      if (!isDrawing){
+        return
+      }
+
+      ctx.beginPath()
+      ctx.moveTo(oldX,oldY)
+      ctx.lineTo(event.offsetX, event.offsetY)    
+      ctx.stroke()
+
+    oldX = event.offsetX
+    oldY = event.offsetY    
+    })
+
+    ctx.lineWidth = 2
+  </script>
+</html>
