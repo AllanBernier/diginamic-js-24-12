@@ -1,0 +1,21 @@
+<html>
+
+  <!-- 
+  Exercice 1 : Modification de texte
+  Créez un bouton. Quand l'utilisateur clique dessus, changez le texte d'un élément <p> avec un message de votre choix.
+  !-->
+
+
+  <p> Texte à modifier </p>
+  <button onclick="handleClick()"> Modifier le texte </button>
+
+
+  <script>
+
+    const handleClick = () => {
+      document.querySelector("p").innerHTML = "Texte modifié"
+    }
+
+  </script>
+  
+</html>

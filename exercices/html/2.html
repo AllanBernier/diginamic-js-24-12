@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html> 
+ <!--
+ Exercice 2 : Création de liste dynamique
+Créez un formulaire avec un champ texte et un bouton "Ajouter". À chaque clic sur "Ajouter", le texte saisi est ajouté dans une liste <ul>.
+ !-->
+
+  <input type="text" id="textInput" />
+  <button onclick="handleCreate()"> Ajouter </button>
+
+  <ul id="listItem">
+
+  </ul>
+
+  <script> 
+    const textInput = document.getElementById("textInput")
+    const listItem = document.getElementById("listItem")
+
+    const handleCreate = () => {
+      const text = textInput.value
+      const li = document.createElement('li')
+      li.textContent = text 
+      listItem.appendChild(li)
+      textInput.value = ''
+    } 
+
+  </script>
+
+</html>
+
