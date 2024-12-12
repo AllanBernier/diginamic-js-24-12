@@ -1,0 +1,18 @@
+<html>
+  <!-- 
+  Exercice 3 : Gestion des couleurs
+  Créez trois boutons avec des couleurs différentes. Quand l'utilisateur clique sur un bouton, 
+  changez la couleur de fond de la page selon la couleur associée.
+  !-->
+
+    <button onclick="handleColor('red')" style="background-color : red"> Red </button>
+    <button onclick="handleColor('blue')"style="background-color : blue"> Blue </button>
+    <button onclick="handleColor('green')"style="background-color : green"> Green </button>
+
+    <script>
+      const handleColor = (color) => {
+        document.body.style.backgroundColor = color
+      }
+    </script>
+ 
+</html>
