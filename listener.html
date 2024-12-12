@@ -1,0 +1,36 @@
+<html>
+  <p>
+    Position de la souris : <span id="x"> 0 </span> , <span id="y"> 0 </span>
+  </p>
+
+  <script>
+    const spanX = document.getElementById('x');
+    const spanY = document.getElementById('y');
+
+    document.addEventListener('mousemove', (event) => {
+      //console.log(event)
+      spanX.textContent = event.clientX;
+      spanY.textContent = event.clientY;
+    });
+
+    document.addEventListener('click', (event) => {
+      console.log('click', event);
+    });
+
+    document.addEventListener('mousedown', (event) => {
+      console.log('down', event);
+    });
+
+    document.addEventListener('mouseup', (event) => {
+      console.log(event);
+    });
+
+    document.addEventListener('mouseenter', (event) => {
+      console.log(event);
+    });
+
+    document.addEventListener('mouseleave', (event) => {
+      console.log(event);
+    });
+  </script>
+</html>
