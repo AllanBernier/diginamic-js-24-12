@@ -1,0 +1,28 @@
+<html>
+<!--
+Exercice 6 : Afficher/Masquer un élément
+Créez un bouton "Afficher/Masquer".
+Quand on clique sur ce bouton, un paragraphe est soit affiché, soit masqué (en alternance).
+Changez également le texte du bouton pour refléter l’état actuel ("Afficher" ou "Masquer").
+!-->
+
+<button id="toggle"> Masquer </button>
+<p id="toggleTexte"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+
+  <script>
+    const toggleTexte = document.getElementById("toggleTexte")
+    let isVisible = true
+
+    document.getElementById("toggle").addEventListener('click', () => {
+      if (isVisible){
+        toggleTexte.remove()
+        isVisible = false
+      } else {
+        document.body.appendChild(toggleTexte)
+        isVisible = true
+      }
+    })
+
+  </script>
+  </html>

@@ -1,0 +1,31 @@
+<html>
+<!--
+Exercice 5 : Compteur interactif
+Créez un bouton "Ajouter" et un bouton "Réinitialiser".
+Quand on clique sur "Ajouter", un compteur affiché dans un <div> s'incrémente de 1.
+Quand on clique sur "Réinitialiser", le compteur revient à zéro.
+!-->
+  <div>
+    <button id="addButton"> Ajouter </button>
+    <button id="resetButton"> Réinitialiser </button>
+    <div id="counter">
+      0
+    </div>
+  <div>
+
+  <script>
+    const counterDisplay = document.getElementById("counter")
+
+    let counter = 0
+
+    document.getElementById("addButton").addEventListener('click', () => {
+      counter ++
+      counterDisplay.textContent = counter
+    })
+
+    document.getElementById("resetButton").addEventListener('click', () => {
+      counter = 0
+      counterDisplay.textContent = counter
+    })
+  </script>
+</html>
